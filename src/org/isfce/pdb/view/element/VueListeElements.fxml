@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            fx:controller="org.isfce.pdb.view.element.VueListeElementsController">
+    <children>
+        <Label layoutX="5.0" layoutY="5.0" text="Liste des éléments"
+               AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+               AnchorPane.topAnchor="5.0" styleClass="titre"/>
+
+        <TableView fx:id="tblElements"
+                   AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0"
+                   AnchorPane.topAnchor="35.0" AnchorPane.bottomAnchor="50.0">
+            <columns>
+                <TableColumn fx:id="colCode" text="Code" prefWidth="80"/>
+                <TableColumn fx:id="colAppareil" text="Appareil" prefWidth="250"/>
+                <TableColumn fx:id="colQt" text="Qt" prefWidth="50"/>
+                <TableColumn fx:id="colPiece" text="Pièce" prefWidth="200"/>
+            </columns>
+        </TableView>
+
+        <HBox alignment="CENTER_RIGHT" spacing="10.0"
+              AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button fx:id="btValider" text="Valider" onAction="#actionValider"/>
+                <Button fx:id="btQuitter" text="Quitter" onAction="#actionQuitter"/>
+            </children>
+            <padding>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+            </padding>
+        </HBox>
+    </children>
+</AnchorPane>
